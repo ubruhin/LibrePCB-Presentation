@@ -1,0 +1,102 @@
+\documentclass[aspectratio=1610,t]{beamer}
+
+% Colors
+\usepackage{color}
+\definecolor{mainorange}{HTML}{EC811B}
+\definecolor{lightgrey}{HTML}{888888}
+
+% Syntax highlighting
+\usepackage{minted}
+\usepackage{alltt}
+\newcommand\hi[1]{{\color{mainorange} \textbf{#1}}}
+
+% Theme
+\usetheme[%
+	subsectionpage=progressbar,
+	numbering=fraction,
+	progressbar=foot,
+]{metropolis}
+
+% Customization
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamerfont{title}{size=\fontsize{30}{30}}
+\setbeamerfont{block title}{size=\large}
+\newcommand\sep{\textcolor{lightgrey}{\rule{\linewidth}{0.05mm}}}
+
+% Meta
+\title{Title of this Presentation}
+\date{\today}
+\author{Name (@twitter-or-github-handle), Name2 (@github-or-twitter-handle)}
+\institute{Coredump Rapperswil}
+
+\begin{document}
+
+\pgfdeclareimage[width=\paperwidth]{bg}{background-dark.pdf}
+\usebackgroundtemplate{\pgfuseimage{bg}}
+\maketitle
+
+% ----------------------------------------------------------------- %
+
+\begin{frame}[plain,noframenumbering]
+	\frametitle{Outline}
+	\setcounter{tocdepth}{1}
+	\tableofcontents
+\end{frame}
+
+% ----------------------------------------------------------------- %
+
+\pgfdeclareimage[width=\paperwidth]{bg}{background-light.pdf}
+\usebackgroundtemplate{\pgfuseimage{bg}}
+
+\section{Section 1}
+
+\begin{frame}{Text}
+  This is regular text.
+  \begin{itemize}
+    \item You can also include
+    \item various
+    \item list items
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Code}
+  When including minted code, the \texttt{[fragile]} option needs to be added to
+  the frame.
+
+  \begin{minted}{rust}
+  let color = Color::Red;
+  match color {
+    Color::Red => println!("Got red"),
+    Color::Green => println!("Got green"),
+    Color::Blue => println!("Got blue"),
+  }
+  \end{minted}
+\end{frame}
+
+% ----------------------------------------------------------------- %
+
+\section{Section 2}
+
+\begin{frame}{Picture Time}
+  Let's add some more text to it.
+
+  And a picture of a cute cat!
+
+  \includegraphics[height=6cm]{cat.jpg}
+\end{frame}
+
+% ----------------------------------------------------------------- %
+
+{
+\setbeamertemplate{footline}{}
+\pgfdeclareimage[width=\paperwidth]{bg}{background-inverted.pdf}
+\usebackgroundtemplate{\pgfuseimage{bg}}
+\begin{frame}[standout]
+	\begin{centering}
+	{\Huge Thank you!}\\
+	{\normalsize \url{www.coredump.ch}}\\
+	\end{centering}
+\end{frame}
+}
+
+\end{document}
