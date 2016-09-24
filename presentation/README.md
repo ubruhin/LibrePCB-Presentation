@@ -8,10 +8,11 @@ Requirements:
 - latexmk
 - Fira fonts
 - pygmentize (for code highlighting)
+- minted (for code highlighting)
 
 To install the dependencies under Ubuntu 16.04:
 ```
-sudo apt install texlive-xetex texlive-fonts-extra python-pygments
+sudo apt install texlive-xetex texlive-fonts-extra texlive-latex-extra python-pygments
 ```
 
 ## Building
