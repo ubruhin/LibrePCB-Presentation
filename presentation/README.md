@@ -12,9 +12,12 @@ Requirements:
 - pgfopts
 
 To install the dependencies under Ubuntu 16.04:
-```
-sudo apt install texlive-xetex texlive-fonts-extra texlive-latex-extra texlive-pictures python-pygments
-```
+
+    sudo apt install texlive-xetex texlive-fonts-extra texlive-latex-extra texlive-pictures python-pygments
+
+Arch linux:
+
+    sudo pacman -S texlive-most pygmentize minted
 
 ## Building
 
