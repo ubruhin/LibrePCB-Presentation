@@ -9,13 +9,14 @@ Requirements:
 - Fira fonts
 - pygmentize (for code highlighting)
 - minted (for code highlighting)
-- pgfopts
 
 To install the dependencies under Ubuntu 16.04:
 
-    sudo apt install texlive-xetex texlive-fonts-extra texlive-latex-extra texlive-pictures python-pygments
+    sudo apt-get install make latexmk \
+        texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra \
+        python-pygments lmodern
 
-Arch linux:
+Arch Linux:
 
     sudo pacman -S texlive-most pygmentize minted
 
